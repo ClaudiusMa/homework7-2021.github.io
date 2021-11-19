@@ -5,10 +5,10 @@ window.addEventListener("load", function() {
 
 });
 
-video.volume = 1;
 document.getElementById("play").addEventListener("click", function() {
 	console.log("Play Video")
 	video.play()
+	document.querySelector("#volume").innerHTML = video.volume*100 + "%";
 	console.log(video.volume)
 });
 
@@ -16,9 +16,9 @@ document.getElementById("pause").addEventListener("click", function() {
 	video.pause()
 });
 
-video.PlaybackRate = 1;
+video.PlaybackRate=1
 document.getElementById("slower").addEventListener("click", function() {
-	video.PlaybackRate = 0.95 * video.PlaybackRate;
+	video.PlaybackRate *= 0.95;
 	console.log(video.PlaybackRate)
 });
 
