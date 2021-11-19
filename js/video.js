@@ -16,14 +16,14 @@ document.getElementById("pause").addEventListener("click", function() {
 	video.pause()
 });
 
-video.PlaybackRate=1
+
 document.getElementById("slower").addEventListener("click", function() {
-	video.PlaybackRate *= 0.95;
+	video.playbackRate = video.playbackRate  * 0.95;
 	console.log(video.PlaybackRate)
 });
 
 document.getElementById("faster").addEventListener("click", function() {
-	video.PlaybackRate =video.PlaybackRate/0.95;
+	video.playbackRate = video.playbackRate * 1.05;
 	console.log(video.PlaybackRate)
 });
 
